@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>test</title>
+
+</head>
+
+<body>
+
+	Details:
+	
+	<span id ="areas">
+		<textarea cols="20" rows="4" name="test" id="test">
+			testtesttesttest 123 12345
+		</textarea>
+	</span>
+	<script>
+		//var selection;
+		var flag = 0;
+		function cleartxt()
+		{
+			document.getElementById("test").value = "";
+		}
+		
+		function selectDelete()
+		{
+
+			var txtarea = document.getElementById("test");
+			var s = txtarea.selectionStart;
+			var e = txtarea.selectionEnd;
+
+			var pattern = txtarea.value.substring(s,e);
+			var regex = new RegExp(pattern, "g");
+			
+			document.getElementById("test").value = 
+				document.getElementById("test").value.replace(regex,"");
+			
+		}
+		function ret()
+		{
+			alert("test");
+		}
+		function addnewarea()
+		{
+			if(flag < 1)
+			{
+			document.getElementById("areas").innerHTML += '<textarea cols="20" rows="4"></textarea>';
+			flag = 1;
+			}
+		}
+		
+
+	</script>
+	<button onclick="cleartxt()"> Delete All </button>
+	<br>
+	<button onclick="selectDelete()"> Delete Selection </button>
+	<br>
+	<button onclick="addnewarea()"> Add new TextArea Element</button>
+</body>
+
+</html>

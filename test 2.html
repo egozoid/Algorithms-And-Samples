@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>test</title>
+	<style>
+		
+		.slideshow {
+		  max-width: 500px;
+		  position: relative;
+		  margin: auto;
+		}
+
+		.Slides {
+		    display: none;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	SlideShow:
+	<script>
+			
+	var slideIndex = 0;
+
+	function NextSlide() {
+	showSlides(slideIndex +=1);
+	}
+
+	function showSlides(n) 
+	{
+	var i;
+	var slides = document.getElementsByClassName("Slides");
+
+	if (n > slides.length) {slideIndex = 1}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+		}
+
+	slides[slideIndex-1].style.display = "block";
+	}
+	
+	</script>
+<div class="slideshow">
+
+  <div class="Slides">
+    <img src="image1.jpeg" style="width:100%">
+  </div>
+
+  <div class="Slides">
+    <img src="image2.jpeg" style="width:100%">
+  </div>
+
+  <div class="Slides">
+    <img src="image3.jpeg" style="width:100%">
+</div>
+<button onclick="NextSlide()"> Next </button>
+
+</body>
+
+</html>
