@@ -44,63 +44,9 @@ class Geography:
 
     def get_temperature(self) -> str:
         return self.temperature
-
-    """setStringValue(String
-    Value)
-    {
-    // String
-    c = "";
-    StringBuilder
-    Sb = new
-    StringBuilder();
-    for (int i = 0; i < Value.Length; i++)
-    {
-    if (Value[i] == ' ')
-    {
-    Sb.Append("%20");
-    }
-    else if (Char.IsLetter(Value, i))
-    {
-    Sb.Append(Value[i]);
-    }
-    }
-    if (Value.Length > 0)
-    Sb.Append(",");
-    return Sb.ToString();
-    }
-    
-    def set_city(self,city: str) -> str:
-        self.city = setStringValue(city);
-    / *Prevents
-    code
-    duplication
-    String
-    c = "";
-    StringBuilder
-    Sb = new
-    StringBuilder(c);
-    for (int i = 0; i < city.Length; i++)
-    {
-
-    if (city[i] == ' ')
-    {
-    Sb.Append("%20");
-    }
-
-    else if (Char.IsLetter(city, i))
-    {
-    Sb.Append(city[i]);
-    }
-    }
-    c = Sb.ToString();
-    this.city = c;
-    * /
-    }
-    """
-
-
+        
 def main():
-    """geo = Geography()
+    geo = Geography()
     urlscnd = geo.city
     url = 'http://api.openweathermap.org/data/2.5/weather'
     parameters = {'q': urlscnd, 'appid': 'f66e6563cd674cf48787b61885d7ced5'}
@@ -123,63 +69,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-"""
-
-
-
-}
-
-
-
-public
-void
-setCountry(String
-country)
-{
-this.country = setStringValue(country);
-/ *Prevents
-code
-duplication
-String
-c = "";
-StringBuilder
-Sb = new
-StringBuilder(c);
-for (int i = 0; i < country.Length; i++)
-    {
-    if (country[i] == ' ')
-    {
-        Sb.Append("%20");
-    }
-    else if (Char.IsLetter(country, i))
-    {
-    Sb.Append(country[i]);
-    }
-    }
-if (country.Length > 0)
-Sb.Append(",");
-c = Sb.ToString();
-this.country = c; * /
-}
-public
-String
-
-public
-Geography(String
-country, String
-city)
-{
-this.setCountry(country);
-this.setCity(city);
-}
-public
-Geography()
-{
-this.setCountry("");
-this.setCity("");
-this.setTemperature("&units=metric");
-}
-
-}
-}
-    """
